@@ -1,8 +1,8 @@
 .container{
     width: 550px;
-    height: 480px;
+    height: 520px;
     margin: auto;
-    margin-top: 30px ;
+    margin-top: 10px ;
     border-radius: 12px;
     background-image: linear-gradient(180deg,#130754 0%, #3b2f80 100% );
 }
@@ -89,4 +89,10 @@
 
 #discription{
     color: white;
+}
+.other-data{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
 }
