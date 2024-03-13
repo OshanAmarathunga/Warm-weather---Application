@@ -35,11 +35,15 @@ const WeatherApp = () => {
                 const temperature = document.getElementsByClassName("weather-temp");
                 const location = document.getElementById("weather-location");
                 const description=document.getElementById("discription");
+                const tempMax=document.getElementById("temp-max");
+                const tempMin=document.getElementById("temp-min");
                 humidity[0].innerHTML = data.main.humidity + " %";
                 wind[0].innerHTML = data.wind.speed + " km/h";
                 temperature[0].innerHTML = data.main.temp + " °c";
                 location.innerHTML = data.name;
                 description.innerHTML="~~ "+data.weather[0].description+" ~~";
+                tempMax.innerHTML=data.main.temp_max+ " °c";
+                tempMin.innerHTML=data.main.temp_min+ " °c";
 
 
                 if (data.weather[0].icon == "01d" || data.weather[0].icon == "01n") {
@@ -85,7 +89,7 @@ const WeatherApp = () => {
             </div>
             <div className="weather-temp"></div>
             <div className="weather-location" id="weather-location"></div>
-            <div id="discription" >hi</div>
+            <div id="discription">hi</div>
             <div className="data-container">
                 <div className="element">
                     <img src={humidity_icon} alt="" className="icon"/>
@@ -103,6 +107,16 @@ const WeatherApp = () => {
                     </div>
                 </div>
 
+            </div>
+            <div className="other-data">
+                <div>
+                    <div>Temp-max</div>
+                    <div id="temp-max">56</div>
+                </div>
+                <div>
+                    <div >Temp-min</div>
+                    <div id="temp-min">67</div>
+                </div>
             </div>
 
         </div>
